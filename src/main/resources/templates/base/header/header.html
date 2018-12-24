@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head lang="en">
+</head>
+<body>
+<div class="page-header navbar navbar-fixed-top" layout:fragment="header">
+    <!-- BEGIN HEADER INNER -->
+    <div class="page-header-inner ">
+        <!-- BEGIN LOGO -->
+        <div layout:replace="~{base/header/header-logo :: header-logo}" />
+        <!-- END LOGO -->
+        <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+        <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+            <span></span>
+        </a>
+        <!-- END RESPONSIVE MENU TOGGLER -->
+        <!-- BEGIN TOP NAVIGATION MENU -->
+        <div layout:replace="~{base/header/header-top-navigation-menu :: header-top-navigation-menu}" />
+        <!-- END TOP NAVIGATION MENU -->
+    </div>
+</div>
+</body>
+</html>

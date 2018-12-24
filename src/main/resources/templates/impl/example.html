@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{index.html}">
+<head lang="en">
+    <title>Example Page</title>
+</head>
+<div layout:fragment="container-page-breadcrumb-toolbar">
+    <div layout:replace="~{impl/dashboard-1/dashboard-1-page-breadcrumb :: dashboard-1-page-breadcrumb}" />
+    <div layout:replace="~{impl/dashboard-1/dashboard-1-page-toolbar :: dashboard-1-page-toolbar}" />
+</div>
+<div layout:fragment="content-impl">
+    <h2>This is Implementation Content</h2>
+</div>
+</html>

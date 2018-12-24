@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="base/header/header-script :: header-script" />
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
+<div class="page-wrapper" th:fragment="scaffolding-container">
+    <!-- BEGIN HEADER -->
+    <div th:replace="base/header/header :: header" />
+    <!-- END HEADER INNER -->
+    <!-- BEGIN HEADER & CONTENT DIVIDER -->
+    <div class="clearfix"> </div>
+    <!-- END HEADER & CONTENT DIVIDER -->
+    <!-- BEGIN CONTAINER -->
+    <div class="row">
+        <div th:replace="base/scaffolding/scaffolding-table:: scaffolding-table" />
+    </div>
+    <!-- END CONTAINER -->
+    <!-- BEGIN FOOTER -->
+    <div th:replace="base/footer/footer :: footer" />
+    <!-- END FOOTER -->
+
+</div>
+<!-- BEGIN FOOTER SCRIPT-->
+<div th:include="base/footer/footer-script :: footer-script" />
+<!-- END FOOTER SCRIPT-->
+</body>
+</html>

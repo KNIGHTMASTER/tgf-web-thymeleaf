@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head lang="en">
+</head>
+<body>
+<div class="page-logo" layout:fragment="header-logo">
+    <a th:href="index.html">
+        <img th:src="@{/static/img/logo-sigma.png}" alt="logo" class="logo-default" />
+    </a>
+    <div class="menu-toggler sidebar-toggler">
+        <span></span>
+    </div>
+</div>
+</body>
+</html>

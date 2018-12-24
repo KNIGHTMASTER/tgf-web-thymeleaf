@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org">
+<head th:include="base/header/header-script :: header-script" />
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
+
+<div class="page-wrapper">
+    <!-- BEGIN HEADER -->
+    <div layout:replace="~{base/header/header :: header}" />
+    <!-- END HEADER INNER -->
+    <!-- BEGIN HEADER & CONTENT DIVIDER -->
+    <div class="clearfix"> </div>
+    <!-- END HEADER & CONTENT DIVIDER -->
+    <!-- BEGIN CONTAINER -->
+    <div layout:replace="~{base/content/container :: container}" />
+    <!-- END CONTAINER -->
+    <!--<div layout:fragment="index-content"/>-->
+    <!-- BEGIN FOOTER -->
+    <div layout:replace="~{base/footer/footer :: footer}" />
+    <!-- END FOOTER -->
+</div>
+
+<!-- BEGIN QUICK NAV -->
+<!--<div layout:include="base/quick-nav/quick-nav :: quick-nav" />-->
+<!-- END QUICK NAV -->
+
+<!-- BEGIN FOOTER SCRIPT-->
+<div th:include="base/footer/footer-script :: footer-script" />
+<!-- END FOOTER SCRIPT-->
+</body>
+</html>

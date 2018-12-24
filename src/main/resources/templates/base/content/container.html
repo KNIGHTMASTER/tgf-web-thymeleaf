@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<body>
+<div class="page-container" layout:fragment="container">
+    <!-- BEGIN SIDEBAR -->
+    <div layout:replace="~{base/sidebar/sidebar :: sidebar}"/>
+    <!-- END SIDEBAR -->
+    <!-- BEGIN CONTENT -->
+    <div class="page-content-wrapper">
+        <!-- BEGIN CONTENT BODY -->
+        <div class="page-content">
+            <!-- BEGIN PAGE HEADER-->
+            <!-- BEGIN THEME PANEL -->
+            <!--<div th:replace="base/content/container-theme-panel :: container-theme-panel" />-->
+            <!-- END THEME PANEL -->
+            <!-- BEGIN PAGE BAR -->
+            <div class="page-bar" layout:fragment="container-page-bar">
+                <div layout:replace="~{base/content/container-page-breadcrumb :: container-page-breadcrumb}"/>
+                <span layout:fragment="page-toolbar" />
+            </div>
+            <!-- END PAGE BAR -->
+            <!-- BEGIN PAGE TITLE-->
+            <h1 class="page-title" th:text="${pageTitle}" >
+                <h4 th:text="${pageSubTitle}" />
+            </h1>
+            <!-- END PAGE TITLE-->
+            <!-- END PAGE HEADER-->
+            <!-- BEGIN CONTENT IMPLEMENTATION-->
+            <div layout:fragment="content-impl">
+                <p>Content Implementation</p>
+            </div>
+            <!-- END CONTENT IMPLEMENTATION-->
+        </div>
+        <!-- END CONTENT BODY -->
+    </div>
+    <!-- END CONTENT -->
+    <!-- BEGIN QUICK SIDEBAR -->
+    <div layout:replace="~{base/quick-sidebar/quick-sidebar :: quick-sidebar}"></div>
+    <!-- END QUICK SIDEBAR -->
+</div>
+</body>
+</html>
